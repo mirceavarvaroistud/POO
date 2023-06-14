@@ -45,7 +45,7 @@ void displayCar()
     }
     fin.close();
     cout<<"\nThere is a total of "<<rec<<" cars stored...\n";
-    cout<<"\nPress 0  to return to menu\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
     cin>>stall;
 }
 
@@ -53,6 +53,7 @@ void modify()
 {
     Car l;
     int n, flag=0,pos;
+    int stall;
     fstream fin("cars.bin", ios::in|ios::out);
     cout<<"Introduce car ID: ";
     cin>>n;
@@ -73,12 +74,15 @@ void modify()
     fin.close();
     if(flag==0)
         cout<<"Number of cars with ID-ul: "<<n<<" not available...\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void searchbyID()
 {
     Car l;
     int n, flag=0;
+    int stall;
     ifstream fin("cars.bin");
     cout<<"Introduce car Id to be searched: ";
     cin>>n;
@@ -93,6 +97,8 @@ void searchbyID()
     fin.close();
     if(flag==0)
         cout<<"Car with Id: "<<n<<" is not available...\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void searchByMark()
@@ -100,6 +106,7 @@ void searchByMark()
     Car l;
     int flag=0;
     char mark[20];
+    int stall;
     ifstream fin("cars.bin");
     cout<<"Introduce car mark to be searched: ";
     cin.ignore();
@@ -115,6 +122,8 @@ void searchByMark()
     fin.close();
     if(flag==0)
         cout<<"Car of mark: "<<mark<<"is not available...\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void searchByModel()
@@ -122,6 +131,7 @@ void searchByModel()
     Car l;
     int flag=0, rec=0;
     char model[20];
+    int stall;
     ifstream fin("cars.bin");
     cout<<"Introduce car model to be searched: ";
     cin.ignore();
@@ -140,6 +150,8 @@ void searchByModel()
     fin.close();
     if(flag==0)
         cout<<"Car of model: "<<model<<" is not available...\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void searchByRegNumber()
@@ -147,6 +159,7 @@ void searchByRegNumber()
     Car l;
     int flag=0, rec=0;
     char regnb[20];
+    int stall;
     ifstream fin("cars.bin");
     cout<<"Introduce registration number to be searched: ";
     cin.ignore();
@@ -165,6 +178,8 @@ void searchByRegNumber()
     fin.close();
     if(flag==0)
         cout<<"Car with registration number: "<<regnb<<" is not available...\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void displayClient()
@@ -191,6 +206,7 @@ void modifyClient()
 {
     Client s;
     int n, flag=0,pos;
+    int stall;
     fstream fin("clients.bin", ios::in|ios::out);
     cout<<"Introduce client Id: ";
     cin>>n;
@@ -211,12 +227,15 @@ void modifyClient()
     fin.close();
     if(flag==0)
         cout<<"Client number Id: "<<n<<" is not available...\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void searchByIdClient()
 {
     Client s;
     int n, flag=0;
+    int stall;
     ifstream fin("clients.bin");
     cout<<"Introduce client Id: ";
     cin>>n;
@@ -231,6 +250,8 @@ void searchByIdClient()
     fin.close();
     if(flag==0)
         cout<<"Client with Id: "<<n<<" is not available...\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void searchByFirstName()
@@ -238,6 +259,7 @@ void searchByFirstName()
     Client s;
     int flag=0;
     char FirstName[20];
+    int stall;
     ifstream fin("clients.bin");
     cout<<"Introduce client first name to be searched: ";
     cin.ignore();
@@ -253,6 +275,8 @@ void searchByFirstName()
     fin.close();
     if(flag==0)
         cout<<"Client with first name: "<<FirstName<<"is not available...\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void searchByLastName()
@@ -260,6 +284,7 @@ void searchByLastName()
     Client s;
     int flag=0;
     char LastName[20];
+    int stall;
     ifstream fin("clients.bin");
     cout<<"Introduce client last name: ";
     cin.ignore();
@@ -275,6 +300,8 @@ void searchByLastName()
     fin.close();
     if(flag==0)
         cout<<"Client sith last name: "<<LastName<<"is not available..\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void searchByRentedCar()
@@ -282,6 +309,7 @@ void searchByRentedCar()
     Client s;
     int flag=0;
     char RentedCar[20];
+    int stall;
     ifstream fin("clients.bin");
     cout<<"Introduce rented car to be searched: ";
     cin.ignore();
@@ -297,6 +325,8 @@ void searchByRentedCar()
     fin.close();
     if(flag==0)
         cout<<"No client rented: "<<RentedCar<<"\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void searchByStartDate()
@@ -304,6 +334,7 @@ void searchByStartDate()
     Client s;
     int flag=0;
     char StartDate[20];
+    int stall;
     ifstream fin("clients.bin");
     cout<<"Introduce start date to search: ";
     cin.ignore();
@@ -319,6 +350,8 @@ void searchByStartDate()
     fin.close();
     if(flag==0)
         cout<<"No car rented at that date: "<<StartDate<<"\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void searchByReturnDate()
@@ -326,6 +359,7 @@ void searchByReturnDate()
     Client s;
     int flag=0;
     char ReturnDate[20];
+    int stall;
     ifstream fin("clients.bin");
     cout<<"Introduce return date: ";
     cin.ignore();
@@ -341,11 +375,14 @@ void searchByReturnDate()
     fin.close();
     if(flag==0)
         cout<<"No client rented this car: "<<ReturnDate<<"\n";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void deleteClient(int n)
 {
     Client s;
+    int stall;
     ifstream inFile;
     ofstream outFile;
     inFile.open("clients.bin", ios::binary);
@@ -368,11 +405,14 @@ void deleteClient(int n)
     remove("clients.bin");
     rename("deleteclient.bin", "clients.bin");
     cout <<"\nClient was deleted!";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void deleteCar(int n)
 {
     Car l;
+    int stall;
     ifstream inFile;
     ofstream outFile;
     inFile.open("cars.bin", ios::binary);
@@ -395,6 +435,8 @@ void deleteCar(int n)
     remove("cars.bin");
     rename("deletecar.bin", "cars.bin");
     cout <<"\nCar was deleted!";
+    cout<<"\nPress 0 and enter to return to menu\n";
+    cin>>stall;
 }
 
 void carSearchMenu()

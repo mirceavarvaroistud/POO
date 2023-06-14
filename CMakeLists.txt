@@ -6,17 +6,17 @@ set(CMAKE_CXX_STANDARD 11)
 
 # Add your source files
 set(SOURCES
-    ~/Desktop/POO/src/main.cpp
-    ~/Desktop/POO/src/display.cpp
-    ~/Desktop/POO/src/client.cpp
-    ~/Desktop/POO/src/car.cpp
+    src/main.cpp
+    src/display.cpp
+    src/client.cpp
+    src/car.cpp
 )
 
 # Add your header files
 set(HEADERS
-    ~/Desktop/POO/include/display.h
-    ~/Desktop/POO/include/client.h
-    ~/Desktop/POO/include/car.h
+    include/display.h
+    include/client.h
+    include/car.h
 )
 
 # Create an executable from the sources
